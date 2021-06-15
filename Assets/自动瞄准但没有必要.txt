@@ -1,0 +1,33 @@
+/*if (Input.GetKeyDown(KeyCode.K) && timer == 0)
+        {
+            timer += attackInterval;
+            float moveX, moveY;
+            int state = GetComponent<PlayerMove>().state;
+            moveX = dx[state];
+            moveY = dy[state];
+            float mn = 1000000000;
+            for (int i = 0; i < monster.Length; i++)
+            {
+                if (monster[i] != null)
+                {
+                    RaycastHit2D hit = Physics2D.Raycast(transform.position, monster[i].transform.position - transform.position, 100, 1 << 12);
+                    if (monster[i] == hit.collider.gameObject)
+                    {
+                        float tmpX, tmpY;
+                        tmpX = monster[i].transform.position.x - transform.position.x;
+                        tmpY = monster[i].transform.position.y - transform.position.y;
+                        float d = Mathf.Sqrt(tmpX * tmpX + tmpY * tmpY);
+                        tmpX /= d; tmpY /= d;
+                        if (d < mn)
+                        {
+                            mn = d;
+                            moveX = tmpX;
+                            moveY = tmpY;
+                        }
+                    }
+                }
+            }
+            GameObject tmp = GameObject.Instantiate(gameobject);
+            tmp.transform.position = transform.position;
+            tmp.GetComponent<Rigidbody2D>().AddForce(new Vector2(force * (moveX), force * (moveY)));
+        }*/
